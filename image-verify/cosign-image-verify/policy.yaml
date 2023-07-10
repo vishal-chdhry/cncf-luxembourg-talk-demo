@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cosign-test
+---
+apiVersion: kyverno.io/v2beta1
+kind: ClusterPolicy
+metadata:
+  name: check-image-cosign
+spec:
+  validationFailureAction: Enforce
+  webhookTimeoutSeconds: 30
+  failurePolicy: Fail  
+  rules:
+    - name: verify-signature-cosign
+      match:
+        any:
+        - resources:
+            namespaces:
+            - cosign-test
+            kinds:
+              - Pod
+      verifyImages:
+      - imageReferences:
+        - "ghcr.io/vishal-chdhry/monitor*"
+        attestors:
+        - entries:
+          - keys:
+              publicKeys: |-
+                -----BEGIN PUBLIC KEY-----
+                MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEXTQ9AO4pnnhctlppmpcVBTjy6vto
+                r7Ffpm6TN1yaZp6HtWS1rr7KoQdhbCVV9zvixizGLehDhsPwuBoWjwfhbA==
+                -----END PUBLIC KEY-----

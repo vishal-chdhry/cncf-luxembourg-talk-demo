@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cosign-test-pod
+  namespace: cosign-test
+spec:
+  containers:
+  - image: ghcr.io/vishal-chdhry/monitor:v1
+    name: cosign-test-pod

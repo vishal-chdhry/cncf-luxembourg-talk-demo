@@ -1,0 +1,1 @@
+# kubectl -n test-validate exec nginx -it -- sh
