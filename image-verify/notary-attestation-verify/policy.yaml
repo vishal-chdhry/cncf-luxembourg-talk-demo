@@ -67,7 +67,7 @@ spec:
             - all:
               - key: "{{ components[?name=='busybox'].version || 'none' }}"
                 operator: AllNotIn
-                value: ["1.36.0"]
+                value: ["1.36.9"]
 
 
 # kubectl apply -f image-verify/notary-attestation-verify/policy.yaml

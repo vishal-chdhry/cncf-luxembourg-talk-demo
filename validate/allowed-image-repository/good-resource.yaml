@@ -6,6 +6,6 @@ metadata:
 spec:
   containers:
   - image: myknownimage
-    name: myknownimage
+    name: test-image
 
-# kubectl apply -f validate/allowed-image-repository/good-resource.yaml
+# kubectl apply -f validate/allowed-image-repository/good-resource.yaml --dry-run=server

@@ -8,4 +8,4 @@ spec:
   - image: corp.reg.com/test-verify-image:signed
     name: test-allowed-repo
 
-# kubectl apply -f validate/allowed-image-repository/bad-resource.yaml
+# kubectl apply -f validate/allowed-image-repository/bad-resource.yaml --dry-run=server
