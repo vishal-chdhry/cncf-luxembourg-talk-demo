@@ -14,3 +14,5 @@ spec:
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 status: {}
+
+# kubectl apply -f image-verify/notary-attestation-verify/resource.yaml

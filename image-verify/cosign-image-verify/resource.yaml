@@ -7,3 +7,5 @@ spec:
   containers:
   - image: ghcr.io/vishal-chdhry/monitor:v1
     name: cosign-test-pod
+
+# kubectl apply -f image-verify/cosign-image-verify/resource.yaml

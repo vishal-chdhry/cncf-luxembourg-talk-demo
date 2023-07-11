@@ -62,3 +62,5 @@ spec:
           entries:
           - certificates:
               cert: "{{ keys.data.certificate }}"
+
+# kubectl apply -f image-verify/notary-image-verify/policy.yaml           

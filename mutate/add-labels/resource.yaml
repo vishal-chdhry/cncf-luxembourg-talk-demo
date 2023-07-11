@@ -7,3 +7,6 @@ spec:
   containers:
   - image: corp.reg.com/test-verify-image:signed
     name: test-add-labels
+
+# kubectl apply -f mutate/add-labels/resource.yaml
+# kubectl describe pod test-add-labels -n add-labels-ns | grep "Labels"

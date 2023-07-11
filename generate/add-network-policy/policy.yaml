@@ -37,3 +37,5 @@ spec:
           policyTypes:
           - Ingress
           - Egress
+
+# kubectl apply -f generate/add-network-policy/policy.yaml     

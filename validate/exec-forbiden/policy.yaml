@@ -44,16 +44,6 @@ spec:
                 operator: Equals
                 value: "false"
 ---
-apiVersion: v1
-kind: Pod
-metadata:
-  name: nginx
-  labels:
-    app: nginx
-    tier: frontend
-    exec: "false"
-  namespace: test-validate
-spec:
-  containers:
-    - name: nginx
-      image: nginx
+
+
+# kubectl apply -f validate/exec-forbiden/policy.yaml

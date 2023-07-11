@@ -35,3 +35,6 @@ spec:
           - <(image): "corp.reg.com/*"
           imagePullSecrets:
           - name: my-secret
+
+# kubectl apply -f mutate/add-image-pull-secret/policy.yaml
+# kubectl get pod test-image-pull-pod -n test-image-pull-secret-mutate -o yaml

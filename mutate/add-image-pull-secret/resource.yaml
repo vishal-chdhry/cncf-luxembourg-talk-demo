@@ -7,3 +7,5 @@ spec:
   containers:
   - image: corp.reg.com/test-verify-image:signed
     name: test-secret
+
+# kubectl apply -f mutate/add-image-pull-secret/resource.yaml

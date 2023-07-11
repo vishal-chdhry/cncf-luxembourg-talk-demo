@@ -31,3 +31,5 @@ spec:
                 MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEXTQ9AO4pnnhctlppmpcVBTjy6vto
                 r7Ffpm6TN1yaZp6HtWS1rr7KoQdhbCVV9zvixizGLehDhsPwuBoWjwfhbA==
                 -----END PUBLIC KEY-----
+
+# kubectl apply -f image-verify/cosign-image-verify/policy.yaml
