@@ -1,7 +1,8 @@
+---
 apiVersion: kyverno.io/v1
 kind: ClusterPolicy
 metadata:
-  name: check-slsa-attestations-fail-1
+  name: check-slsa-attestations
   annotations:
     pod-policies.kyverno.io/autogen-controllers: none
 spec:
@@ -9,7 +10,7 @@ spec:
   webhookTimeoutSeconds: 30
   background: false
   rules:
-    - name: check-builder-id-keyless-fail-1
+    - name: check-builder-id-keyless
       match:
         any:
         - resources:
@@ -19,7 +20,7 @@ spec:
       - imageReferences:
         - "ghcr.io/chipzoller/zulu*"
         attestations:
-        - type: cosign.sigstore.dev/attestation/vuln/v1
+        - type: https://slsa.dev/provenance/v0.2
           attestors: 
           - entries:
             - keyless:
